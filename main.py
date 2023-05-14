@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# INSITE LAB
+# Nick English 2022
+
 import paho.mqtt.client as mqtt
 from estop_nogui import EstopNoGui
 from movement import Movement
-#137.146.188.201
 
 #create Spot object
-#spot = Movement("user", "vd87k7o35nrs", "192.168.1.10")
-spot = Movement("user", "vd87k7o35nrs", "137.146.188.201")
+spot = Movement(USERNAME, PASS, ROBOT_IP)
 
 
 def messageDecoder(client, userdata, msg):
@@ -87,9 +88,7 @@ def connectionStatus(client, userdata, flags, rc):
 
 
 clientName = "RPI"
-#serverAddress = "137.146.255.24" # guest access
-#serverAddress = "192.168.1.2" #irobot
-serverAddress = "137.146.188.247"
+serverAddress = RPI_IP
 
 mqttClient = mqtt.Client(clientName)
 
