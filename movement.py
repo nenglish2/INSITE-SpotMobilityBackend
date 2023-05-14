@@ -1,3 +1,4 @@
+#INSITE lab
 #Narit Trikasemsak 2022
 #Nick English 2022
 
@@ -463,8 +464,6 @@ class Movement():
             add_grasp_constraint(config, grasp, robot_state_client)
 
 
-if __name__ == "__main__":
-	spot = Movement("user", "vd87k7o35nrs", "137.146.188.201")
     
    
 
